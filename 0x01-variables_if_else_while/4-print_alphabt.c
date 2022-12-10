@@ -4,15 +4,17 @@
  * main -  prints the alphabets in lowercase, letters except q and e
  * Return: 0
  */
-init main(void)
+int main(void)
 {
-	char ch;
+	char ch = 'a';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	while (ch <= 'z')
 	{
-		if (ch == 'e' || ch == 'q')
-		continue;
-		putchar(ch);
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch);
+		}
+		ch++;
 	}
 	putchar('\n');
 	return (0);
